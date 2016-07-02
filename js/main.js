@@ -27,7 +27,13 @@ var first = [
 	"most dirty",
 	"unhappiest",
 	"scariest",
-	"biggest"
+	"biggest",
+	"most offended",
+	"most motivational",
+	"most sexually aggressive",
+	"most sexually appealing",
+	"most deprived",
+	"merciless"
 ];
 
 // real talk why is this list (initially) so female-related
@@ -64,7 +70,14 @@ var middle = [
 	"meme",
 	"men",
 	"meninist",
-	"top 50"
+	"top 50 countdown",
+	"vine kid",
+	"vine god",
+	"selfie stick",
+	"furry",
+	"brony",
+	"almighty queen",
+	"almighty king"
 ];
 
 // decided to just 50/50 chance "ever" appearing at the end
@@ -108,7 +121,10 @@ var action = [
 	"kills themself on camera",
 	"has a mental breakdown on camera",
 	"returns with fire",
-	"throws shade"
+	"throws shade",
+	"will never shave their armpits",
+	"is in love with me",
+	"wants to have sex with me"
 ];
 
 // a lot of the last array can be procedurally generated but it's 4:36 in the morning and im ti
@@ -129,7 +145,11 @@ function getClickbait() {
 	parts.push(last_part);
 
 	if(!getRandom(3)) {
-		parts.push(action[getRandom(action.length-1)]);
+		var action_part = action[getRandom(action.length-1)];
+		if(!getRandom(2)) {
+			action_part = "literally " + action_part;
+		}
+		parts.push(action_part);
 	}
 
 	return "the " + parts.join(" ");
