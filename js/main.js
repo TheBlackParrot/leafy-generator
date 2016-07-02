@@ -57,11 +57,18 @@ var middle = [
 	"pimp",
 	"music video",
 	"enraged feminist",
-	"kkk member"
+	"kkk member",
+	"boobs",
+	"roast",
+	"mixtape",
+	"meme",
+	"men",
+	"meninist",
+	"top 50"
 ];
 
 // decided to just 50/50 chance "ever" appearing at the end
-// also decided to 20% chance "WANTS TO LITTERALLY KILL ME", "EXPOSES ME", "RAGES AT ME", or "ROASTS ME" appearing
+// also decided to 33% chance "WANTS TO LITTERALLY KILL ME", "EXPOSES ME", "RAGES AT ME", or "ROASTS ME" appearing
 var last = [
 	"on planet earth",
 	"to ever touch the internet",
@@ -93,7 +100,15 @@ var action = [
 	"roasts me",
 	"is spreading rumors about me",
 	"is sending me death threats",
-	"needs to end"
+	"needs to end",
+	"tries to be cute",
+	"says they hate white people",
+	"says they hate black people",
+	"rages at youtube",
+	"kills themself on camera",
+	"has a mental breakdown on camera",
+	"returns with fire",
+	"throws shade"
 ];
 
 // a lot of the last array can be procedurally generated but it's 4:36 in the morning and im ti
@@ -113,7 +128,7 @@ function getClickbait() {
 	}
 	parts.push(last_part);
 
-	if(!getRandom(5)) {
+	if(!getRandom(3)) {
 		parts.push(action[getRandom(action.length-1)]);
 	}
 
